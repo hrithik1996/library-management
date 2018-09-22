@@ -1,0 +1,16 @@
+{% extends "transaction.html" %}
+{% block content %}
+ <form action=" " method="POST" class="form-control">
+ 	{{ form.hidden_tag() }}
+ 	<ul>
+
+ 		{{ form.select(class="form-control") }}
+ 		{{ form.select_1(class="form-control") }}
+ 		<div class="form-group">
+ 			{{ form.submit(class="btn btn-outline-info") }} 
+ 		</div>
+ 	</ul>
+ 		
+ 		
+ </form>
+{% endblock %}

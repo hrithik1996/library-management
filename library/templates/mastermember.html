@@ -1,0 +1,28 @@
+{% extends "report.html" %}
+{% block content %}
+<div class="content-section">
+	<center><h5>List of Active Member</h5></center>
+	<table class="table table-striped table-bordered table-hover table-condensed">
+		<tr class="active">
+			<th>Name</th>
+			<th>Contact No</th>
+			<th>Adhaar No</th>
+			<th>Start Date</th>
+			<th>End Date</th>
+			<th>Status</th>
+			<th>Fine</th>
+		</tr>
+		{% for user in users %}
+		<tr>
+			<td>{{ user.first_name }} {{ user.last_name }}</td>
+			<td>{{ user.contact_no }}</td>
+			<td>{{ user.adhaar_card }}</td>
+			<td>{{ user.start_date }}</td>
+			<td>{{ user.end_date }}</td>
+			<td>Active</td>
+			<td>{{ user.user_issue.fine }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+{% endblock %}

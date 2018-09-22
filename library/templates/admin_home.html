@@ -1,0 +1,11 @@
+{% extends "layout_admin.html" %}
+{% block content %}
+
+<div class="content-section">
+    <a class="btn btn-info mb-4" type="button" href="{{ url_for('maintenance') }}">Maintenence</a>
+    <a class="btn btn-info mb-4" type="button" href="{{ url_for('report') }}">Reports</a>
+    <a class="btn btn-info mb-4" type="button" href="{{ url_for('transaction') }}">Transaction</a>
+</div>
+
+
+{% endblock %}

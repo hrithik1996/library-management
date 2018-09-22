@@ -1,0 +1,46 @@
+{% extends "maintenance.html" %}
+{% block content %}
+	<div class="container">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4">Add Book/Movie</legend>
+				<div class="form-group">
+					{{ form.a.label(class="radio-inline") }}
+					{{ form.a(class="radio-inline") }}
+				</div>
+				<div class="form-group">
+					{{ form.book_name.label(class="form-control-label") }}
+					{{ form.book_name(class="form-control") }}
+				</div>
+				<div class="form-group">
+					{{ form.author_name.label(class="form-control-label") }}
+					{{ form.author_name(class="form-control") }}
+				</div>
+				<div class="form-group">
+					{{ form.pro_date.label(class="form-control-label") }}
+					{{ form.pro_date(class="form-control") }}
+				</div>
+				<div class="form-group">
+					{{ form.quantity.label(class="form-control-label") }}
+					{{ form.quantity(class="form-control") }}
+				</div>
+				<div>
+					{{ form.category.label(class="form-control-label") }}
+					{{ form.category(class="form-control") }}
+				</div>
+				<div>
+					{{ form.cost.label(class="form-control-label") }}
+					{{ form.cost(class="form-control") }}
+				</div>
+			</fieldset>
+			<div class="form-group">
+				{{ form.submit(class="btn btn-outline-info") }}
+			</div>
+		</form>
+	</div>
+{% endblock %}
+
+
+
+
